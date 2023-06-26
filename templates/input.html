@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Stock Price Prediction</h1>
+    </header>
+    
+    <form class="w3-container" action="" method="post" enctype="multipart/form-data">
+        <label class="w3-text-teal"><b>Enter Name of Stock</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='stock' value="{{ stock }}">
+        <br>
+
+        <label class="w3-text-teal"><b>Enter Start Date(YYYY-MN-DD)</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='sdate' value="{{ sdate }}">
+        <br>
+
+        <label class="w3-text-teal"><b>Enter End Date(YYYY-MN-DD)</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='edate' value="{{ edate }}">
+        <br>
+      
+
+        <input class="w3-btn w3-blue-grey" name="prediction" type="submit" value="Predict">
+        <br> <br>
+        <label class="w3-text-teal"><b>Current Price of Stock</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='cprice' value="{{ cprice }}">
+        <br> <br>
+        <label class="w3-text-teal"><b>Predicted Price of Stock</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='pprice' value="{{ pprice }}">
+        <br> <br>
+
+        <!--label class="w3-text-teal"><b>Write Here</b></label>
+        <textarea class="w3-input w3-border w3-light-grey" rows="10" cols="47" name="symptoms" placeholder="Write symptoms here">{% if symptoms %} {{symptoms}} {% endif %}</textarea-->
+        
+      </form>
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+    
+    </div>
+
+    <div class="w3-card-4 w3-margin">
+
+      <header class="w3-container w3-blue">
+        <h1>Analysis Report</h1>
+      </header>
+      <img src="/static/images/stockPrice.jpg" alt="Car" style="width:100%">
+      
+      <footer class="w3-container w3-blue">
+        <h5></h5>
+      </footer>
+  </div>
+
+         
+
+  {% endblock %}

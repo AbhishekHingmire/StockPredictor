@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="w3-card-4 w3-margin">
+
+  <header class="w3-container w3-blue">
+    <h1>Sentiment Analysis</h1>
+  </header>
+
+  <form class="w3-container" action="" method="post" enctype="multipart/form-data">
+    <label class="w3-text-teal"><b>Stock Name</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name='stock' value="{{ stock }}">
+    <br>
+
+    <label class="w3-text-teal"><b>Screen Name</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name='name' value="{{ name }}">
+    <br>
+
+    <label class="w3-text-teal"><b>Total Tweets</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name='tot' value="{{ tot }}">
+    <br>
+
+    <label class="w3-text-teal"><b>Positive Tweets</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name='pos' value="{{ pos }}">
+    <br>
+  
+    <label class="w3-text-teal"><b>Negative Tweets</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name='neg' value="{{ neg }}">
+    <br> <br>
+    <label class="w3-text-teal"><b>% Price Increase</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name='per' value="{{ per }}">
+    <br> <br>
+
+    <label class="w3-text-teal"><b>Prediction</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name='senti' value="{{ senti }}">
+    <br> <br>
+
+    <input class="w3-btn w3-blue-grey" name="prediction" type="submit" value="Predict">
+    <br> <br>
+  </form>
+  <br>
+  <footer class="w3-container w3-blue">
+    <h5></h5>
+  </footer>
+</div>
+{% endblock %}
